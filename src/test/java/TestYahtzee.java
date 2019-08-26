@@ -1,41 +1,16 @@
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Parameterized;
-import java.util.Arrays;
-import java.util.Collection;
 
-@RunWith(Parameterized.class)
 public class TestYahtzee {
-
-    @Parameterized.Parameters()
-    public static Collection<Object[]> testData()
-    {
-        return Arrays.asList(new Object[][]
-                {
-                        {new int[]{1,2,3,4,5}}
-                });
-    }
-
-    @Parameterized.Parameter
-    public int[] diceSet;
-
-    @Before
-    public void createObjects()
-    {
-        Player testPlayer = new Player(diceSet);
-        Yahtzee testGame = new Yahtzee(testPlayer);
-    }
+    public int[] diceSet = new int[]{1,2,3,4,5};
+    public Player testPlayer = new Player(diceSet);
 
     @Test
     public void testChance()
     {
         int expectedOutput = 15;
-        Player testPlayer = new Player(diceSet);
-        Yahtzee testGame = new Yahtzee(testPlayer);
 
-        int chanceScore = testGame.selectChance(testPlayer);
+        int chanceScore = testPlayer.selectChance();
         Assert.assertEquals(expectedOutput, chanceScore);
     }
 
@@ -43,9 +18,8 @@ public class TestYahtzee {
     public void testScoreOnes()
     {
         int expectedOutput = 1;
-        Player testPlayer = new Player(diceSet);
-        Yahtzee testGame = new Yahtzee(testPlayer);
-        int onesScore = testGame.singleNumberCategory(1, testPlayer);
+
+        int onesScore = testPlayer.singleNumberCategory(1);
         Assert.assertEquals(expectedOutput, onesScore);
     }
 
@@ -53,10 +27,8 @@ public class TestYahtzee {
     public void testScoreTwos()
     {
         int expectedOutput = 2;
-        Player testPlayer = new Player(diceSet);
-        Yahtzee testGame = new Yahtzee(testPlayer);
 
-        int twosScore = testGame.singleNumberCategory(2, testPlayer);
+        int twosScore = testPlayer.singleNumberCategory(2);
         Assert.assertEquals(expectedOutput, twosScore);
     }
 
@@ -64,10 +36,8 @@ public class TestYahtzee {
     public void testScoreThrees()
     {
         int expectedOutput = 3;
-        Player testPlayer = new Player(diceSet);
-        Yahtzee testGame = new Yahtzee(testPlayer);
 
-        int threesScore = testGame.singleNumberCategory(3, testPlayer);
+        int threesScore = testPlayer.singleNumberCategory(3);
         Assert.assertEquals(expectedOutput, threesScore);
     }
 
@@ -75,10 +45,8 @@ public class TestYahtzee {
     public void testScoreFours()
     {
         int expectedOutput = 4;
-        Player testPlayer = new Player(diceSet);
-        Yahtzee testGame = new Yahtzee(testPlayer);
 
-        int foursScore = testGame.singleNumberCategory(4, testPlayer);
+        int foursScore = testPlayer.singleNumberCategory(4);
         Assert.assertEquals(expectedOutput, foursScore);
     }
 
@@ -86,10 +54,8 @@ public class TestYahtzee {
     public void testScoreFives()
     {
         int expectedOutput = 5;
-        Player testPlayer = new Player(diceSet);
-        Yahtzee testGame = new Yahtzee(testPlayer);
 
-        int fivesScore = testGame.singleNumberCategory(5, testPlayer);
+        int fivesScore = testPlayer.singleNumberCategory(5);
         Assert.assertEquals(expectedOutput, fivesScore);
     }
 
@@ -97,10 +63,8 @@ public class TestYahtzee {
     public void testScoreSixes()
     {
         int expectedOutput = 0;
-        Player testPlayer = new Player(diceSet);
-        Yahtzee testGame = new Yahtzee(testPlayer);
 
-        int sixesScore = testGame.singleNumberCategory(6, testPlayer);
+        int sixesScore = testPlayer.singleNumberCategory(6);
         Assert.assertEquals(expectedOutput, sixesScore);
     }
 }
