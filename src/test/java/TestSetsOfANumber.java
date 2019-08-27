@@ -1,8 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-
-public class TestPairs {
+public class TestSetsOfANumber {
 
     @Test
     public void testOnePairScore() {
@@ -161,6 +160,16 @@ public class TestPairs {
         int expectedOutput = 0;
 
         int actualScore = testPlayer.yahtzeeScore();
+        Assert.assertEquals(expectedOutput, actualScore);
+    }
+
+    @Test
+    public void testFullHouseScore() {
+        int[] diceSet = new int[]{1, 1, 1, 2, 2};
+        Player testPlayer = new Player(diceSet);
+        int expectedOutput = 7;
+
+        int actualScore = testPlayer.fullHouseScore();
         Assert.assertEquals(expectedOutput, actualScore);
     }
 }

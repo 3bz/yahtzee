@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestYahtzee {
+public class TestSingleNumberScores {
     public int[] diceSet = new int[]{1,2,3,4,5};
     public Player testPlayer = new Player(diceSet);
 
@@ -66,15 +66,5 @@ public class TestYahtzee {
 
         int sixesScore = testPlayer.singleNumberCategory(6);
         Assert.assertEquals(expectedOutput, sixesScore);
-    }
-
-    @Test
-    public void testYahtzeeScore() {
-        int[] diceSet = new int[]{2, 2, 2, 2, 2};
-        Player testPlayer = new Player(diceSet);
-        int expectedOutput = 50;
-
-        int actualScore = testPlayer.fourOfAKindScore();
-        Assert.assertEquals(expectedOutput, actualScore);
     }
 }

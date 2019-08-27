@@ -1,5 +1,8 @@
+import java.util.Arrays;
+
 public class Player {
     private int[] dice = new int[5];
+    private static final int INDICATOR_FOR_EMPTY_DIE = 9;
 
     public Player(int[] aDiceSet) {
         for (int i = 0; i < 5; i++) {
@@ -73,20 +76,7 @@ public class Player {
     }
 
     public int yahtzeeScore() {
-        int diceUsedToCheck;
-        int howWeFindYahtzee;
-        for (int i = 0; i < getDice().length; i++) {
-            diceUsedToCheck = getDice()[i];
-            howWeFindYahtzee = 0;
-            for (int j = 0; j < getDice().length; j++) {
-                if (diceUsedToCheck == getDice()[j]) {
-                    howWeFindYahtzee++;
-                }
-                if (howWeFindYahtzee == 5)
-                    return 50;
-            }
-        }
-        return 0;
+        return containsSetOfNumber(5);
     }
 
     public int containsSetOfNumber(int howManyInSet) {
@@ -96,9 +86,11 @@ public class Player {
             diceUsedToCheck = getDice()[i];
             haveWeFoundEnough = 0;
             for (int j = 0; j < getDice().length; j++) {
-                if (diceUsedToCheck == getDice()[j]) {
+                if ( (diceUsedToCheck == getDice()[j]) && (diceUsedToCheck != INDICATOR_FOR_EMPTY_DIE) ) {
                     haveWeFoundEnough++;
                 }
+                if (haveWeFoundEnough == howManyInSet && howManyInSet == 5)
+                    return 50;
                 if (haveWeFoundEnough == howManyInSet)
                     return diceUsedToCheck*howManyInSet;
             }
@@ -106,8 +98,54 @@ public class Player {
         return 0;
     }
 
+    public int smallStraightScore() {
+        if ( checkNumberContainedInDiceSet(getDice(), 1) &&
+                checkNumberContainedInDiceSet(getDice(), 2) &&
+                checkNumberContainedInDiceSet(getDice(), 3) &&
+                checkNumberContainedInDiceSet(getDice(), 4) &&
+                checkNumberContainedInDiceSet(getDice(), 5) )
+            return 15;
+        return 0;
+    }
+
+    public int largeStraightScore() {
+        if ( checkNumberContainedInDiceSet(getDice(), 2) &&
+                checkNumberContainedInDiceSet(getDice(), 3) &&
+                checkNumberContainedInDiceSet(getDice(), 4) &&
+                checkNumberContainedInDiceSet(getDice(), 5) &&
+                checkNumberContainedInDiceSet(getDice(), 6) )
+            return 20;
+        return 0;
+    }
+
+    public int fullHouseScore() {
+        int threeOAK = containsSetOfNumber(3)/3;
+        removeDiceFromSet(threeOAK);
+        int twoOAK = containsSetOfNumber(2);
+
+        return (threeOAK*3) + twoOAK;
+    }
+
+    public boolean checkNumberContainedInDiceSet(int [] diceSet, int number) {
+        for (int i : diceSet)
+        {
+            if (i == number)
+                return true;
+        }
+        return false;
+    }
+
+    public void removeDiceFromSet(int numToRemove)
+    {
+        for (int i = 0; i < getDice().length; i++) {
+            if (getDice()[i] == numToRemove)
+                getDice()[i] = INDICATOR_FOR_EMPTY_DIE;
+        }
+        //dice = Arrays.stream(dice).filter(x -> x != numToRemove).toArray();
+    }
 
     public int[] getDice() {
         return dice;
     }
+
 }

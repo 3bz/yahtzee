@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14b3429f-37b0-48f1-8e7c-89a5c24126b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/TestMultipleNumberScores.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -14,16 +15,17 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/TestPairs.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/TestPairs.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/TestYahtzee.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/TestYahtzee.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/TestYahtzee.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/TestPairs.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/TestYahtzee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/TestPairs.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-TestYahtzee.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-TestPairs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestPairs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestPairs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestYahtzee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestYahtzee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestSetsOfNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSetsOfANumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestSingleNumberScores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSingleNumberScores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestUtilityMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestUtilityMethods.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +37,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -66,13 +78,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.TestPairs">
-    <configuration name="TestPairs" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.TestUtilityMethods">
+    <configuration name="TestMultipleNumberScores" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;TestPairs&quot; --info" />
+        <option name="scriptParameters" value="--tests &quot;TestMultipleNumberScores&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -87,12 +99,72 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TestYahtzee" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestSetsOfANumber" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;TestYahtzee&quot;" />
+        <option name="scriptParameters" value="--tests &quot;TestSetsOfANumber&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSetsOfANumber.testFullHouseScore" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;TestSetsOfANumber.testFullHouseScore&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSingleNumberScores" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;TestSingleNumberScores&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TestUtilityMethods" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;TestUtilityMethods&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -109,8 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TestPairs" />
-        <item itemvalue="Gradle.TestYahtzee" />
+        <item itemvalue="Gradle.TestUtilityMethods" />
+        <item itemvalue="Gradle.TestMultipleNumberScores" />
+        <item itemvalue="Gradle.TestSetsOfANumber" />
+        <item itemvalue="Gradle.TestSingleNumberScores" />
+        <item itemvalue="Gradle.TestSetsOfANumber.testFullHouseScore" />
       </list>
     </recent_temporary>
   </component>
@@ -125,7 +200,7 @@
       <option name="presentableId" value="Default" />
       <updated>1566782845400</updated>
       <workItem from="1566782861100" duration="11556000" />
-      <workItem from="1566857138092" duration="7461000" />
+      <workItem from="1566857138092" duration="17452000" />
     </task>
     <servers />
   </component>
