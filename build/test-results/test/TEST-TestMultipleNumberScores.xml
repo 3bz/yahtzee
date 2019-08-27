@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestMultipleNumberScores" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-08-27T23:08:51" hostname="C02Y309QJG5J" time="0.001">
+  <properties/>
+  <testcase name="testLargeStraightScoreUnordered" classname="TestMultipleNumberScores" time="0.0"/>
+  <testcase name="testChanceScore" classname="TestMultipleNumberScores" time="0.0"/>
+  <testcase name="testLargeStraightScoreZeroReturn" classname="TestMultipleNumberScores" time="0.0"/>
+  <testcase name="testSmallStraightScoreZeroReturn" classname="TestMultipleNumberScores" time="0.0"/>
+  <testcase name="testLargeStraightScore" classname="TestMultipleNumberScores" time="0.0"/>
+  <testcase name="testSmallStraightScoreUnordered" classname="TestMultipleNumberScores" time="0.0"/>
+  <testcase name="testSmallStraightScore" classname="TestMultipleNumberScores" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

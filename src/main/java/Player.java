@@ -1,38 +1,27 @@
-import java.util.Arrays;
-
 public class Player {
     private int[] dice = new int[5];
     private static final int INDICATOR_FOR_EMPTY_DIE = 9;
 
     public Player(int[] aDiceSet) {
-        for (int i = 0; i < 5; i++) {
-            this.dice[i] = aDiceSet[i];
-        }
+        System.arraycopy(aDiceSet, 0, this.dice, 0, 5);
     }
 
     public int chanceScore() {
-        int result = 0;
-        for (int i = 0; i < getDice().length; i++)
-            result += getDice()[i];
-        return result;
+        return returnTotal();
     }
 
-    public int singleNumberCategory(int numberToScore) {
-        int result = 0;
-        for (int i = 0; i < getDice().length; i++)
-            if (getDice()[i] == numberToScore)
-                result += getDice()[i];
-        return result;
+    public int singleNumberCategoryScore(int numberToScore) {
+        return returnTotal(numberToScore);
     }
 
     public int onePairScore() {
         int foundPair = 0;
         int result = 0;
-        for (int i = 0; i < getDice().length; i++) {
-            if (getDice()[i] != foundPair) {
-                int toBeCompared = getDice()[i];
-                for (int j = i + 1; j < getDice().length; j++) {
-                    if (toBeCompared == getDice()[j]) {
+        for (int i = 0; i < dice.length; i++) {
+            if (dice[i] != foundPair) {
+                int toBeCompared = dice[i];
+                for (int j = i + 1; j < dice.length; j++) {
+                    if (toBeCompared == dice[j]) {
                         foundPair = toBeCompared;
                         result = foundPair * 2;
                         break;
@@ -40,9 +29,7 @@ public class Player {
                 }
             }
         }
-        if (foundPair * 2 > result)
-            return foundPair * 2;
-        return result;
+        return Math.max(foundPair * 2, result);
     }
 
     public int twoPairScore() {
@@ -50,11 +37,11 @@ public class Player {
         int foundPair = 0;
         int result = 0;
         int storedDice;
-        for (int i = 0; i < getDice().length; i++) {
-            storedDice = getDice()[i];
+        for (int i = 0; i < dice.length; i++) {
+            storedDice = dice[i];
             if (storedDice != foundPair) {
-                for (int j = i + 1; j < getDice().length; j++) {
-                    if (storedDice == getDice()[j]) {
+                for (int j = i + 1; j < dice.length; j++) {
+                    if (storedDice == dice[j]) {
                         if (foundPair == 0) {
                             foundPair = storedDice;
                             break;
@@ -68,80 +55,98 @@ public class Player {
     }
 
     public int threeOfAKindScore() {
-        return containsSetOfNumber(3);
+        return returnSetOfNumber(3);
     }
 
     public int fourOfAKindScore() {
-        return containsSetOfNumber(4);
+        return returnSetOfNumber(4);
     }
 
     public int yahtzeeScore() {
-        return containsSetOfNumber(5);
-    }
-
-    public int containsSetOfNumber(int howManyInSet) {
-        int diceUsedToCheck;
-        int haveWeFoundEnough;
-        for (int i = 0; i < getDice().length; i++) {
-            diceUsedToCheck = getDice()[i];
-            haveWeFoundEnough = 0;
-            for (int j = 0; j < getDice().length; j++) {
-                if ( (diceUsedToCheck == getDice()[j]) && (diceUsedToCheck != INDICATOR_FOR_EMPTY_DIE) ) {
-                    haveWeFoundEnough++;
-                }
-                if (haveWeFoundEnough == howManyInSet && howManyInSet == 5)
-                    return 50;
-                if (haveWeFoundEnough == howManyInSet)
-                    return diceUsedToCheck*howManyInSet;
-            }
-        }
-        return 0;
+        return returnSetOfNumber(5);
     }
 
     public int smallStraightScore() {
-        if ( checkNumberContainedInDiceSet(getDice(), 1) &&
-                checkNumberContainedInDiceSet(getDice(), 2) &&
-                checkNumberContainedInDiceSet(getDice(), 3) &&
-                checkNumberContainedInDiceSet(getDice(), 4) &&
-                checkNumberContainedInDiceSet(getDice(), 5) )
+        if (checkNumberContainedInDiceSet(dice, 1) &&
+                checkNumberContainedInDiceSet(dice, 2) &&
+                checkNumberContainedInDiceSet(dice, 3) &&
+                checkNumberContainedInDiceSet(dice, 4) &&
+                checkNumberContainedInDiceSet(dice, 5))
             return 15;
         return 0;
     }
 
     public int largeStraightScore() {
-        if ( checkNumberContainedInDiceSet(getDice(), 2) &&
-                checkNumberContainedInDiceSet(getDice(), 3) &&
-                checkNumberContainedInDiceSet(getDice(), 4) &&
-                checkNumberContainedInDiceSet(getDice(), 5) &&
-                checkNumberContainedInDiceSet(getDice(), 6) )
+        if (checkNumberContainedInDiceSet(dice, 2) &&
+                checkNumberContainedInDiceSet(dice, 3) &&
+                checkNumberContainedInDiceSet(dice, 4) &&
+                checkNumberContainedInDiceSet(dice, 5) &&
+                checkNumberContainedInDiceSet(dice, 6))
             return 20;
         return 0;
     }
 
     public int fullHouseScore() {
-        int threeOAK = containsSetOfNumber(3)/3;
+        int threeOAK = returnSetOfNumber(3) / 3;
         removeDiceFromSet(threeOAK);
-        int twoOAK = containsSetOfNumber(2);
+        int twoOAK = returnSetOfNumber(2);
 
-        return (threeOAK*3) + twoOAK;
+        if ((twoOAK != 0) && (threeOAK != 0))
+            return (threeOAK * 3) + twoOAK;
+        return 0;
     }
 
-    public boolean checkNumberContainedInDiceSet(int [] diceSet, int number) {
-        for (int i : diceSet)
-        {
+    public boolean checkNumberContainedInDiceSet(int[] diceSet, int number) {
+        for (int i : diceSet) {
             if (i == number)
                 return true;
         }
         return false;
     }
 
-    public void removeDiceFromSet(int numToRemove)
-    {
-        for (int i = 0; i < getDice().length; i++) {
-            if (getDice()[i] == numToRemove)
-                getDice()[i] = INDICATOR_FOR_EMPTY_DIE;
+    private void removeDiceFromSet(int numToRemove) {
+        for (int i = 0; i < dice.length; i++) {
+            if (dice[i] == numToRemove)
+                dice[i] = INDICATOR_FOR_EMPTY_DIE;
         }
         //dice = Arrays.stream(dice).filter(x -> x != numToRemove).toArray();
+    }
+
+    private int returnTotal(int numberToScore)
+    {
+        int result = 0;
+        for (int die : dice) {
+            if (die == numberToScore)
+                result += die;
+        }
+        return result;
+    }
+
+    private int returnTotal()
+    {
+        int result = 0;
+        for (int die : dice)
+            result += die;
+        return result;
+    }
+
+    private int returnSetOfNumber(int howManyInSet) {
+        int diceUsedToCheck;
+        int haveWeFoundEnough;
+        for (int i = 0; i < dice.length; i++) {
+            diceUsedToCheck = dice[i];
+            haveWeFoundEnough = 0;
+            for (int j = 0; j < dice.length; j++) {
+                if ((diceUsedToCheck == dice[j]) && (diceUsedToCheck != INDICATOR_FOR_EMPTY_DIE)) {
+                    haveWeFoundEnough++;
+                }
+                if (haveWeFoundEnough == howManyInSet && howManyInSet == 5)
+                    return 50;
+                if (haveWeFoundEnough == howManyInSet)
+                    return diceUsedToCheck * howManyInSet;
+            }
+        }
+        return 0;
     }
 
     public int[] getDice() {

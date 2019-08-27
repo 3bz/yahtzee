@@ -54,7 +54,7 @@ public class TestSetsOfANumber {
     }
 
     @Test
-    public void testTwoPairSpacing() {
+    public void testTwoPairDisplacement() {
         int[] diceSet = new int[]{2, 1, 2, 1, 6};
         Player testPlayer = new Player(diceSet);
         int expectedOutput = 6;
@@ -84,7 +84,7 @@ public class TestSetsOfANumber {
     }
 
     @Test
-    public void testThreeOfAKindSpacing() {
+    public void testThreeOfAKindDisplacement() {
         int[] diceSet = new int[]{2, 1, 2, 1, 2};
         Player testPlayer = new Player(diceSet);
         int expectedOutput = 6;
@@ -104,7 +104,7 @@ public class TestSetsOfANumber {
     }
 
     @Test
-    public void testThreeOfAKindScoreOnly() {
+    public void testThreeOfAKindOnlyInLargerSet() {
         int[] diceSet = new int[]{2, 2, 2, 2, 2};
         Player testPlayer = new Player(diceSet);
         int expectedOutput = 6;
@@ -124,7 +124,7 @@ public class TestSetsOfANumber {
     }
 
     @Test
-    public void testFourOfAKindSpacedSet() {
+    public void testFourOfAKindDisplacement() {
         int[] diceSet = new int[]{2, 2, 3, 2, 2};
         Player testPlayer = new Player(diceSet);
         int expectedOutput = 8;
@@ -166,6 +166,36 @@ public class TestSetsOfANumber {
     @Test
     public void testFullHouseScore() {
         int[] diceSet = new int[]{1, 1, 1, 2, 2};
+        Player testPlayer = new Player(diceSet);
+        int expectedOutput = 7;
+
+        int actualScore = testPlayer.fullHouseScore();
+        Assert.assertEquals(expectedOutput, actualScore);
+    }
+
+    @Test
+    public void testFullHouseZeroReturnNoPair() {
+        int[] diceSet = new int[]{1, 1, 1, 2, 3};
+        Player testPlayer = new Player(diceSet);
+        int expectedOutput = 0;
+
+        int actualScore = testPlayer.fullHouseScore();
+        Assert.assertEquals(expectedOutput, actualScore);
+    }
+
+    @Test
+    public void testFullHouseZeroReturnNoThreeOAK() {
+        int[] diceSet = new int[]{1, 1, 2, 2, 3};
+        Player testPlayer = new Player(diceSet);
+        int expectedOutput = 0;
+
+        int actualScore = testPlayer.fullHouseScore();
+        Assert.assertEquals(expectedOutput, actualScore);
+    }
+
+    @Test
+    public void testFullHouseDisplacement() {
+        int[] diceSet = new int[]{1, 2, 1, 2, 1};
         Player testPlayer = new Player(diceSet);
         int expectedOutput = 7;
 

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14b3429f-37b0-48f1-8e7c-89a5c24126b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestMultipleNumberScores.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -15,17 +14,16 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/TestPairs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/TestYahtzee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/TestPairs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/TestSetsOfANumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/TestSetsOfANumber.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/TestSingleNumberScores.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/TestSingleNumberScores.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/TestUtilityMethods.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/TestUtilityMethods.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-TestPairs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-TestUtilityMethods.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-TestUtilityMethods.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSetsOfNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSetsOfANumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestSetsOfANumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSetsOfANumber.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestSingleNumberScores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSingleNumberScores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestUtilityMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestUtilityMethods.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,6 +63,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -78,7 +77,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.TestUtilityMethods">
+  <component name="RunManager" selected="Gradle.Tests in 'Yahtzee.test'">
     <configuration name="TestMultipleNumberScores" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -105,26 +104,6 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;TestSetsOfANumber&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="TestSetsOfANumber.testFullHouseScore" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;TestSetsOfANumber.testFullHouseScore&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -179,13 +158,33 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="Tests in 'Yahtzee.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests *" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TestUtilityMethods" />
-        <item itemvalue="Gradle.TestMultipleNumberScores" />
+        <item itemvalue="Gradle.Tests in 'Yahtzee.test'" />
         <item itemvalue="Gradle.TestSetsOfANumber" />
         <item itemvalue="Gradle.TestSingleNumberScores" />
-        <item itemvalue="Gradle.TestSetsOfANumber.testFullHouseScore" />
+        <item itemvalue="Gradle.TestMultipleNumberScores" />
+        <item itemvalue="Gradle.TestUtilityMethods" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +199,8 @@
       <option name="presentableId" value="Default" />
       <updated>1566782845400</updated>
       <workItem from="1566782861100" duration="11556000" />
-      <workItem from="1566857138092" duration="17452000" />
+      <workItem from="1566857138092" duration="18490000" />
+      <workItem from="1566942686515" duration="2481000" />
     </task>
     <servers />
   </component>
@@ -212,7 +212,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

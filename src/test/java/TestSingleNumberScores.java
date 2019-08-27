@@ -19,7 +19,7 @@ public class TestSingleNumberScores {
     {
         int expectedOutput = 1;
 
-        int onesScore = testPlayer.singleNumberCategory(1);
+        int onesScore = testPlayer.singleNumberCategoryScore(1);
         Assert.assertEquals(expectedOutput, onesScore);
     }
 
@@ -28,7 +28,7 @@ public class TestSingleNumberScores {
     {
         int expectedOutput = 2;
 
-        int twosScore = testPlayer.singleNumberCategory(2);
+        int twosScore = testPlayer.singleNumberCategoryScore(2);
         Assert.assertEquals(expectedOutput, twosScore);
     }
 
@@ -37,7 +37,7 @@ public class TestSingleNumberScores {
     {
         int expectedOutput = 3;
 
-        int threesScore = testPlayer.singleNumberCategory(3);
+        int threesScore = testPlayer.singleNumberCategoryScore(3);
         Assert.assertEquals(expectedOutput, threesScore);
     }
 
@@ -46,7 +46,7 @@ public class TestSingleNumberScores {
     {
         int expectedOutput = 4;
 
-        int foursScore = testPlayer.singleNumberCategory(4);
+        int foursScore = testPlayer.singleNumberCategoryScore(4);
         Assert.assertEquals(expectedOutput, foursScore);
     }
 
@@ -55,7 +55,7 @@ public class TestSingleNumberScores {
     {
         int expectedOutput = 5;
 
-        int fivesScore = testPlayer.singleNumberCategory(5);
+        int fivesScore = testPlayer.singleNumberCategoryScore(5);
         Assert.assertEquals(expectedOutput, fivesScore);
     }
 
@@ -64,7 +64,7 @@ public class TestSingleNumberScores {
     {
         int expectedOutput = 0;
 
-        int sixesScore = testPlayer.singleNumberCategory(6);
+        int sixesScore = testPlayer.singleNumberCategoryScore(6);
         Assert.assertEquals(expectedOutput, sixesScore);
     }
 }

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestSetsOfANumber" tests="20" skipped="0" failures="0" errors="0" timestamp="2019-08-27T23:08:51" hostname="C02Y309QJG5J" time="0.005">
+  <properties/>
+  <testcase name="testYahtzeeZeroReturn" classname="TestSetsOfANumber" time="0.001"/>
+  <testcase name="testPairDisplacement" classname="TestSetsOfANumber" time="0.0"/>
+  <testcase name="testThreeOfAKindOnlyInLargerSet" classname="TestSetsOfANumber" time="0.0"/>
+  <testcase name="testFullHouseScore" classname="TestSetsOfANumber" time="0.0"/>
+  <testcase name="testFullHouseZeroReturnNoPair" classname="TestSetsOfANumber" time="0.0"/>
+  <testcase name="testYahtzeeScore" classname="TestSetsOfANumber" time="0.001"/>
+  <testcase name="testTwoPairDisplacement" classname="TestSetsOfANumber" time="0.0"/>
+  <testcase name="testLastPair" classname="TestSetsOfANumber" time="0.0"/>
+  <testcase name="testFullHouseDisplacement" classname="TestSetsOfANumber" time="0.0"/>
+  <testcase name="testTwoPairScore" classname="TestSetsOfANumber" time="0.0"/>
+  <testcase name="testThreeOfAKindScore" classname="TestSetsOfANumber" time="0.0"/>
+  <testcase name="testOnePairScore" classname="TestSetsOfANumber" time="0.0"/>
+  <testcase name="testThreeOfAKindZeroReturn" classname="TestSetsOfANumber" time="0.0"/>
+  <testcase name="testFullHouseZeroReturnNoThreeOAK" classname="TestSetsOfANumber" time="0.0"/>
+  <testcase name="testFourOfAKindZeroReturn" classname="TestSetsOfANumber" time="0.0"/>
+  <testcase name="testFourOfAKindScore" classname="TestSetsOfANumber" time="0.0"/>
+  <testcase name="testThreeOfAKindDisplacement" classname="TestSetsOfANumber" time="0.0"/>
+  <testcase name="testTwoPairZeroReturn" classname="TestSetsOfANumber" time="0.0"/>
+  <testcase name="testStrongestPair" classname="TestSetsOfANumber" time="0.0"/>
+  <testcase name="testFourOfAKindDisplacement" classname="TestSetsOfANumber" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
