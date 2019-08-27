@@ -8,22 +8,22 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/TestSetsOfANumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/TestSetsOfANumber.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/TestSingleNumberScores.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/TestSingleNumberScores.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/TestMultipleNumberScores.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/TestMultipleNumberScores.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/TestSetsOfANumber.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/TestSetsOfANumber.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/TestSingleNumberScores.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/TestSingleNumberScores.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/TestUtilityMethods.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/TestUtilityMethods.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-TestMultipleNumberScores.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-TestMultipleNumberScores.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-TestSetsOfANumber.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-TestSetsOfANumber.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-TestSingleNumberScores.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-TestSingleNumberScores.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-TestUtilityMethods.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-TestUtilityMethods.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSetsOfANumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSetsOfANumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSingleNumberScores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSingleNumberScores.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,12 +118,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TestSingleNumberScores" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestSetsOfANumber.testOnePairScore" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;TestSingleNumberScores&quot;" />
+        <option name="scriptParameters" value="--tests &quot;TestSetsOfANumber.testOnePairScore&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -138,12 +138,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TestUtilityMethods" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TestSingleNumberScores" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;TestUtilityMethods&quot;" />
+        <option name="scriptParameters" value="--tests &quot;TestSingleNumberScores&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -181,10 +181,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'Yahtzee.test'" />
+        <item itemvalue="Gradle.TestSetsOfANumber.testOnePairScore" />
         <item itemvalue="Gradle.TestSetsOfANumber" />
         <item itemvalue="Gradle.TestSingleNumberScores" />
         <item itemvalue="Gradle.TestMultipleNumberScores" />
-        <item itemvalue="Gradle.TestUtilityMethods" />
       </list>
     </recent_temporary>
   </component>
@@ -200,7 +200,7 @@
       <updated>1566782845400</updated>
       <workItem from="1566782861100" duration="11556000" />
       <workItem from="1566857138092" duration="18490000" />
-      <workItem from="1566942686515" duration="2481000" />
+      <workItem from="1566942686515" duration="4215000" />
     </task>
     <servers />
   </component>

@@ -15,43 +15,20 @@ public class Player {
     }
 
     public int onePairScore() {
-        int foundPair = 0;
-        int result = 0;
-        for (int i = 0; i < dice.length; i++) {
-            if (dice[i] != foundPair) {
-                int toBeCompared = dice[i];
-                for (int j = i + 1; j < dice.length; j++) {
-                    if (toBeCompared == dice[j]) {
-                        foundPair = toBeCompared;
-                        result = foundPair * 2;
-                        break;
-                    }
-                }
-            }
-        }
-        return Math.max(foundPair * 2, result);
+        int foundPair = findPair();
+        removeDiceFromSet(findPair()/2);
+        int potentialStrongerPair = findPair();
+        return Math.max(foundPair, potentialStrongerPair);
     }
 
     public int twoPairScore() {
-        //22216
-        int foundPair = 0;
-        int result = 0;
-        int storedDice;
-        for (int i = 0; i < dice.length; i++) {
-            storedDice = dice[i];
-            if (storedDice != foundPair) {
-                for (int j = i + 1; j < dice.length; j++) {
-                    if (storedDice == dice[j]) {
-                        if (foundPair == 0) {
-                            foundPair = storedDice;
-                            break;
-                        } else
-                            result = foundPair * 2 + storedDice * 2;
-                    }
-                }
-            }
-        }
-        return result;
+        int firstPair = findPair();
+        removeDiceFromSet(firstPair/2);
+        int secondPair = findPair();
+
+        if (firstPair > 0 && secondPair > 0)
+            return firstPair + secondPair;
+        return 0;
     }
 
     public int threeOfAKindScore() {
@@ -87,12 +64,12 @@ public class Player {
     }
 
     public int fullHouseScore() {
-        int threeOAK = returnSetOfNumber(3) / 3;
-        removeDiceFromSet(threeOAK);
-        int twoOAK = returnSetOfNumber(2);
+        int threeOAK = threeOfAKindScore();
+        removeDiceFromSet(threeOAK / 3);
+        int onePair = onePairScore();
 
-        if ((twoOAK != 0) && (threeOAK != 0))
-            return (threeOAK * 3) + twoOAK;
+        if ((onePair > 0) && (threeOAK > 0))
+            return threeOAK + onePair;
         return 0;
     }
 
@@ -102,6 +79,22 @@ public class Player {
                 return true;
         }
         return false;
+    }
+
+    private int findPair()
+    {
+        int toBeCompared;
+        for (int i = 0; i < dice.length; i++) {
+            if (dice[i] != INDICATOR_FOR_EMPTY_DIE) {
+                toBeCompared = dice[i];
+                for (int j = i + 1; j < dice.length; j++) {
+                    if (toBeCompared == dice[j]) {
+                        return toBeCompared * 2;
+                    }
+                }
+            }
+        }
+        return 0;
     }
 
     private void removeDiceFromSet(int numToRemove) {
