@@ -6,16 +6,16 @@ public class TestYahtzee {
     public Player testPlayer = new Player(diceSet);
 
     @Test
-    public void testChance()
+    public void testChanceScore()
     {
         int expectedOutput = 15;
 
-        int chanceScore = testPlayer.selectChance();
+        int chanceScore = testPlayer.chanceScore();
         Assert.assertEquals(expectedOutput, chanceScore);
     }
 
     @Test
-    public void testScoreOnes()
+    public void testOnesScore()
     {
         int expectedOutput = 1;
 
@@ -24,7 +24,7 @@ public class TestYahtzee {
     }
 
     @Test
-    public void testScoreTwos()
+    public void testTwosScore()
     {
         int expectedOutput = 2;
 
@@ -33,7 +33,7 @@ public class TestYahtzee {
     }
 
     @Test
-    public void testScoreThrees()
+    public void testThreesScore()
     {
         int expectedOutput = 3;
 
@@ -42,7 +42,7 @@ public class TestYahtzee {
     }
 
     @Test
-    public void testScoreFours()
+    public void testFoursScore()
     {
         int expectedOutput = 4;
 
@@ -51,7 +51,7 @@ public class TestYahtzee {
     }
 
     @Test
-    public void testScoreFives()
+    public void testFivesScore()
     {
         int expectedOutput = 5;
 
@@ -60,11 +60,21 @@ public class TestYahtzee {
     }
 
     @Test
-    public void testScoreSixes()
+    public void testSixesScore()
     {
         int expectedOutput = 0;
 
         int sixesScore = testPlayer.singleNumberCategory(6);
         Assert.assertEquals(expectedOutput, sixesScore);
+    }
+
+    @Test
+    public void testYahtzeeScore() {
+        int[] diceSet = new int[]{2, 2, 2, 2, 2};
+        Player testPlayer = new Player(diceSet);
+        int expectedOutput = 50;
+
+        int actualScore = testPlayer.fourOfAKindScore();
+        Assert.assertEquals(expectedOutput, actualScore);
     }
 }

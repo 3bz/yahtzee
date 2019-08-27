@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestPairs" tests="16" skipped="0" failures="0" errors="0" timestamp="2019-08-27T02:15:23" hostname="C02Y309QJG5J" time="0.004">
+  <properties/>
+  <testcase name="testYahtzeeZeroReturn" classname="TestPairs" time="0.001"/>
+  <testcase name="testPairDisplacement" classname="TestPairs" time="0.0"/>
+  <testcase name="testThreeOfAKindSpacing" classname="TestPairs" time="0.0"/>
+  <testcase name="testYahtzeeScore" classname="TestPairs" time="0.0"/>
+  <testcase name="testLastPair" classname="TestPairs" time="0.0"/>
+  <testcase name="testThreeOfAKindScoreOnly" classname="TestPairs" time="0.0"/>
+  <testcase name="testTwoPairScore" classname="TestPairs" time="0.0"/>
+  <testcase name="testThreeOfAKindScore" classname="TestPairs" time="0.0"/>
+  <testcase name="testOnePairScore" classname="TestPairs" time="0.0"/>
+  <testcase name="testThreeOfAKindZeroReturn" classname="TestPairs" time="0.0"/>
+  <testcase name="testFourOfAKindZeroReturn" classname="TestPairs" time="0.0"/>
+  <testcase name="testFourOfAKindScore" classname="TestPairs" time="0.0"/>
+  <testcase name="testFourOfAKindSpacedSet" classname="TestPairs" time="0.0"/>
+  <testcase name="testTwoPairSpacing" classname="TestPairs" time="0.0"/>
+  <testcase name="testTwoPairZeroReturn" classname="TestPairs" time="0.0"/>
+  <testcase name="testStrongestPair" classname="TestPairs" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
