@@ -7,10 +7,10 @@ public class TestMultipleNumberScores {
     public void testChanceScore()
     {
         int[] diceSet = new int[]{5, 4, 3, 2, 1};
-        Player testPlayer = new Player(diceSet);
+        Game testGame = new Game(diceSet);
         int expectedOutput = 15;
 
-        int chanceScore = testPlayer.chanceScore();
+        int chanceScore = testGame.chanceScore();
         Assert.assertEquals(expectedOutput, chanceScore);
     }
 
@@ -18,10 +18,10 @@ public class TestMultipleNumberScores {
     public void testSmallStraightScore()
     {
         int[] diceSet = new int[]{1, 2, 3, 4, 5};
-        Player testPlayer = new Player(diceSet);
+        Game testGame = new Game(diceSet);
         int expectedOutput = 15;
 
-        int chanceScore = testPlayer.smallStraightScore();
+        int chanceScore = testGame.smallStraightScore();
         Assert.assertEquals(expectedOutput, chanceScore);
     }
 
@@ -29,10 +29,10 @@ public class TestMultipleNumberScores {
     public void testSmallStraightScoreZeroReturn()
     {
         int[] diceSet = new int[]{1, 2, 3, 4, 6};
-        Player testPlayer = new Player(diceSet);
+        Game testGame = new Game(diceSet);
         int expectedOutput = 0;
 
-        int straightScore = testPlayer.smallStraightScore();
+        int straightScore = testGame.smallStraightScore();
         Assert.assertEquals(expectedOutput, straightScore);
     }
 
@@ -40,40 +40,40 @@ public class TestMultipleNumberScores {
     public void testSmallStraightScoreUnordered()
     {
         int[] diceSet = new int[]{4, 2, 1, 6, 5};
-        Player testPlayer = new Player(diceSet);
+        Game testGame = new Game(diceSet);
         int expectedOutput = 0;
 
-        int straightScore = testPlayer.smallStraightScore();
+        int straightScore = testGame.smallStraightScore();
         Assert.assertEquals(expectedOutput, straightScore);
     }
 
     @Test
     public void testLargeStraightScore() {
         int[] diceSet = new int[]{2, 3, 4, 5, 6};
-        Player testPlayer = new Player(diceSet);
+        Game testGame = new Game(diceSet);
         int expectedOutput = 20;
 
-        int chanceScore = testPlayer.largeStraightScore();
-        Assert.assertEquals(expectedOutput, chanceScore);
+        int score = testGame.largeStraightScore();
+        Assert.assertEquals(expectedOutput, score);
     }
 
     @Test
     public void testLargeStraightScoreZeroReturn() {
         int[] diceSet = new int[]{2, 3, 4, 5, 1};
-        Player testPlayer = new Player(diceSet);
+        Game testGame = new Game(diceSet);
         int expectedOutput = 0;
 
-        int chanceScore = testPlayer.largeStraightScore();
-        Assert.assertEquals(expectedOutput, chanceScore);
+        int score = testGame.largeStraightScore();
+        Assert.assertEquals(expectedOutput, score);
     }
 
     @Test
     public void testLargeStraightScoreUnordered() {
         int[] diceSet = new int[]{6, 4, 3, 5, 2};
-        Player testPlayer = new Player(diceSet);
+        Game testGame = new Game(diceSet);
         int expectedOutput = 20;
 
-        int chanceScore = testPlayer.largeStraightScore();
-        Assert.assertEquals(expectedOutput, chanceScore);
+        int score = testGame.largeStraightScore();
+        Assert.assertEquals(expectedOutput, score);
     }
 }

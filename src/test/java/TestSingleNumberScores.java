@@ -3,14 +3,14 @@ import org.junit.Test;
 
 public class TestSingleNumberScores {
     public int[] diceSet = new int[]{1,2,3,4,5};
-    public Player testPlayer = new Player(diceSet);
+    public Game testGame = new Game(diceSet);
 
     @Test
     public void testChanceScore()
     {
         int expectedOutput = 15;
 
-        int chanceScore = testPlayer.chanceScore();
+        int chanceScore = testGame.chanceScore();
         Assert.assertEquals(expectedOutput, chanceScore);
     }
 
@@ -19,7 +19,7 @@ public class TestSingleNumberScores {
     {
         int expectedOutput = 1;
 
-        int onesScore = testPlayer.singleNumberCategoryScore(1);
+        int onesScore = testGame.singleNumberCategoryScore(1);
         Assert.assertEquals(expectedOutput, onesScore);
     }
 
@@ -28,7 +28,7 @@ public class TestSingleNumberScores {
     {
         int expectedOutput = 2;
 
-        int twosScore = testPlayer.singleNumberCategoryScore(2);
+        int twosScore = testGame.singleNumberCategoryScore(2);
         Assert.assertEquals(expectedOutput, twosScore);
     }
 
@@ -37,7 +37,7 @@ public class TestSingleNumberScores {
     {
         int expectedOutput = 3;
 
-        int threesScore = testPlayer.singleNumberCategoryScore(3);
+        int threesScore = testGame.singleNumberCategoryScore(3);
         Assert.assertEquals(expectedOutput, threesScore);
     }
 
@@ -46,7 +46,7 @@ public class TestSingleNumberScores {
     {
         int expectedOutput = 4;
 
-        int foursScore = testPlayer.singleNumberCategoryScore(4);
+        int foursScore = testGame.singleNumberCategoryScore(4);
         Assert.assertEquals(expectedOutput, foursScore);
     }
 
@@ -55,7 +55,7 @@ public class TestSingleNumberScores {
     {
         int expectedOutput = 5;
 
-        int fivesScore = testPlayer.singleNumberCategoryScore(5);
+        int fivesScore = testGame.singleNumberCategoryScore(5);
         Assert.assertEquals(expectedOutput, fivesScore);
     }
 
@@ -64,7 +64,7 @@ public class TestSingleNumberScores {
     {
         int expectedOutput = 0;
 
-        int sixesScore = testPlayer.singleNumberCategoryScore(6);
+        int sixesScore = testGame.singleNumberCategoryScore(6);
         Assert.assertEquals(expectedOutput, sixesScore);
     }
 }

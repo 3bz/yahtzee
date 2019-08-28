@@ -1,149 +1,71 @@
+import java.util.Scanner;
+
 public class Player {
-    private int[] dice = new int[5];
-    private static final int INDICATOR_FOR_EMPTY_DIE = 9;
+    private int[] diceSet;
+    private int score;
+    private int rolls;
+    private Scanner scn = new Scanner(System.in);
 
-    public Player(int[] aDiceSet) {
-        System.arraycopy(aDiceSet, 0, this.dice, 0, 5);
-    }
-
-    public int chanceScore() {
-        return returnTotal();
-    }
-
-    public int singleNumberCategoryScore(int numberToScore) {
-        return returnTotal(numberToScore);
-    }
-
-    public int onePairScore() {
-        int foundPair = findPair();
-        removeDiceFromSet(findPair()/2);
-        int potentialStrongerPair = findPair();
-        return Math.max(foundPair, potentialStrongerPair);
-    }
-
-    public int twoPairScore() {
-        int firstPair = findPair();
-        removeDiceFromSet(firstPair/2);
-        int secondPair = findPair();
-
-        if (firstPair > 0 && secondPair > 0)
-            return firstPair + secondPair;
-        return 0;
-    }
-
-    public int threeOfAKindScore() {
-        return returnSetOfNumber(3);
-    }
-
-    public int fourOfAKindScore() {
-        return returnSetOfNumber(4);
-    }
-
-    public int yahtzeeScore() {
-        return returnSetOfNumber(5);
-    }
-
-    public int smallStraightScore() {
-        if (checkNumberContainedInDiceSet(dice, 1) &&
-                checkNumberContainedInDiceSet(dice, 2) &&
-                checkNumberContainedInDiceSet(dice, 3) &&
-                checkNumberContainedInDiceSet(dice, 4) &&
-                checkNumberContainedInDiceSet(dice, 5))
-            return 15;
-        return 0;
-    }
-
-    public int largeStraightScore() {
-        if (checkNumberContainedInDiceSet(dice, 2) &&
-                checkNumberContainedInDiceSet(dice, 3) &&
-                checkNumberContainedInDiceSet(dice, 4) &&
-                checkNumberContainedInDiceSet(dice, 5) &&
-                checkNumberContainedInDiceSet(dice, 6))
-            return 20;
-        return 0;
-    }
-
-    public int fullHouseScore() {
-        int threeOAK = threeOfAKindScore();
-        removeDiceFromSet(threeOAK / 3);
-        int onePair = onePairScore();
-
-        if ((onePair > 0) && (threeOAK > 0))
-            return threeOAK + onePair;
-        return 0;
-    }
-
-    public boolean checkNumberContainedInDiceSet(int[] diceSet, int number) {
-        for (int i : diceSet) {
-            if (i == number)
-                return true;
-        }
-        return false;
-    }
-
-    private int findPair()
+    public Player()
     {
-        int toBeCompared;
-        for (int i = 0; i < dice.length; i++) {
-            if (dice[i] != INDICATOR_FOR_EMPTY_DIE) {
-                toBeCompared = dice[i];
-                for (int j = i + 1; j < dice.length; j++) {
-                    if (toBeCompared == dice[j]) {
-                        return toBeCompared * 2;
-                    }
-                }
-            }
-        }
-        return 0;
+        score = 0;
+        rolls = 0;
+        diceSet = new int[6];
+        rollDice();
     }
 
-    private void removeDiceFromSet(int numToRemove) {
-        for (int i = 0; i < dice.length; i++) {
-            if (dice[i] == numToRemove)
-                dice[i] = INDICATOR_FOR_EMPTY_DIE;
-        }
-        //dice = Arrays.stream(dice).filter(x -> x != numToRemove).toArray();
-    }
-
-    private int returnTotal(int numberToScore)
+    public void rollDice()
     {
-        int result = 0;
-        for (int die : dice) {
-            if (die == numberToScore)
-                result += die;
-        }
-        return result;
+        System.out.println("Rolling Dice!");
+        for (int i = 0; i < diceSet.length; i++)
+            diceSet[i] = RNG();
+        rolls++;
     }
 
-    private int returnTotal()
+    private void newTurn() {
+        for (int i = 0; i < diceSet.length; i++) {
+            diceSet[i] = i+1;
+        }
+    }
+
+    public void selectDiceToHold()
     {
-        int result = 0;
-        for (int die : dice)
-            result += die;
-        return result;
-    }
-
-    private int returnSetOfNumber(int howManyInSet) {
-        int diceUsedToCheck;
-        int haveWeFoundEnough;
-        for (int i = 0; i < dice.length; i++) {
-            diceUsedToCheck = dice[i];
-            haveWeFoundEnough = 0;
-            for (int j = 0; j < dice.length; j++) {
-                if ((diceUsedToCheck == dice[j]) && (diceUsedToCheck != INDICATOR_FOR_EMPTY_DIE)) {
-                    haveWeFoundEnough++;
-                }
-                if (haveWeFoundEnough == howManyInSet && howManyInSet == 5)
-                    return 50;
-                if (haveWeFoundEnough == howManyInSet)
-                    return diceUsedToCheck * howManyInSet;
-            }
+        System.out.println("Which dice would you like to keep?");
+        readDice();
+        System.out.println("9: Stop");
+        int playerSelection;
+        //boolean playerContinues = true;
+        //while(playerContinues) {
+            playerSelection = scn.nextInt();
+            if (playerSelection > 0 && playerSelection < 7)
+                holdDice(playerSelection);
+            //else if (playerSelection == 9)
+             //   playerContinues = false;
+            else
+                System.out.println("Please enter a valid selection");
         }
-        return 0;
+    //}
+
+    private void holdDice(int diceNumberInSet)
+    {
+        int storedValue = diceSet[diceNumberInSet - 1];
+        System.out.println("Held dice with value: " + storedValue);
+        rollDice();
+        diceSet[diceNumberInSet - 1] = storedValue;
     }
 
-    public int[] getDice() {
-        return dice;
+    public void readDice()
+    {
+        System.out.println("1: " + diceSet[0]);
+        System.out.println("2: " + diceSet[1]);
+        System.out.println("3: " + diceSet[2]);
+        System.out.println("4: " + diceSet[3]);
+        System.out.println("5: " + diceSet[4]);
+        System.out.println("6: " + diceSet[5]);
     }
 
+    private int RNG()
+    {
+        return (int) ( (Math.random() * 6) + 1);
+    }
 }
