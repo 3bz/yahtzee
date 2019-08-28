@@ -64,12 +64,12 @@ public class Game {
     }
 
     public int fullHouseScore() {
-        int threeOAK = threeOfAKindScore();
-        removeDiceFromSet(threeOAK / 3);
+        int threeOfAKind = threeOfAKindScore();
+        removeDiceFromSet(threeOfAKind / 3);
         int onePair = onePairScore();
 
-        if ((onePair > 0) && (threeOAK > 0))
-            return threeOAK + onePair;
+        if ((onePair > 0) && (threeOfAKind > 0))
+            return threeOfAKind + onePair;
         return 0;
     }
 

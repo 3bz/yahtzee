@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="14b3429f-37b0-48f1-8e7c-89a5c24126b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -12,14 +10,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/TestMultipleNumberScores.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/TestMultipleNumberScores.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/TestSetsOfANumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/TestSetsOfANumber.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/TestSingleNumberScores.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/TestSingleNumberScores.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/TestUtilityMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/TestUtilityMethods.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/TestMultipleNumberScores.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/TestMultipleNumberScores.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/TestSetsOfANumber.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/TestSetsOfANumber.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/TestSingleNumberScores.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/TestSingleNumberScores.html" afterDir="false" />
@@ -31,11 +26,9 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-TestSingleNumberScores.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-TestSingleNumberScores.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-TestUtilityMethods.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-TestUtilityMethods.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestMultipleNumberScores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestMultipleNumberScores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSetsOfANumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSetsOfANumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestSingleNumberScores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestSingleNumberScores.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestUtilityMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestUtilityMethods.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,6 +55,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -89,7 +83,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Gradle.Tests in 'Yahtzee.test'">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Yahtzee.main" />
@@ -186,7 +180,8 @@
       <updated>1566782845400</updated>
       <workItem from="1566782861100" duration="11556000" />
       <workItem from="1566857138092" duration="18490000" />
-      <workItem from="1566942686515" duration="9318000" />
+      <workItem from="1566942686515" duration="18384000" />
+      <workItem from="1567032696030" duration="134000" />
     </task>
     <servers />
   </component>
@@ -205,16 +200,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Player.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

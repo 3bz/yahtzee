@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Player {
     private int[] diceSet;
+    private int[] diceHolding;
     private int score;
     private int rolls;
     private Scanner scn = new Scanner(System.in);
@@ -9,10 +10,44 @@ public class Player {
     public Player()
     {
         score = 0;
-        rolls = 0;
-        diceSet = new int[6];
-        rollDice();
+        diceSet = new int[5];
+        diceHolding = new int[]{0,0,0,0,0};
     }
+
+    public void takeTurn()
+    {
+        //while categories aren't depleted
+        newTurn();
+        while (rolls < 3) {
+            selectDiceToHold();
+            reRollConsideringHeldDice();
+            clearHeldDice();
+        }
+        readDice();
+        pickSelection();
+    }
+
+    public void pickSelection()
+    {
+        if(anySelectionsLeft()) {
+
+            for (scoreSelections selection : scoreSelections.values()) {
+                if (selection.getValue() == true)
+                    System.out.println(selection);
+            }
+        }
+    }
+
+    public boolean anySelectionsLeft()
+    {
+        for(scoreSelections selection: scoreSelections.values()) {
+            if(selection.getValue() == true)
+                return true;
+        }
+        return false;
+    }
+
+    //public
 
     public void rollDice()
     {
@@ -23,9 +58,8 @@ public class Player {
     }
 
     private void newTurn() {
-        for (int i = 0; i < diceSet.length; i++) {
-            diceSet[i] = i+1;
-        }
+        rolls = 0;
+        rollDice();
     }
 
     public void selectDiceToHold()
@@ -34,34 +68,47 @@ public class Player {
         readDice();
         System.out.println("9: Stop");
         int playerSelection;
-        //boolean playerContinues = true;
-        //while(playerContinues) {
+        boolean playerContinues = true;
+        while(playerContinues) {
             playerSelection = scn.nextInt();
+
             if (playerSelection > 0 && playerSelection < 7)
                 holdDice(playerSelection);
-            //else if (playerSelection == 9)
-             //   playerContinues = false;
+            else if (playerSelection == 9) {
+                playerContinues = false;
+            }
             else
                 System.out.println("Please enter a valid selection");
         }
-    //}
+    }
 
     private void holdDice(int diceNumberInSet)
     {
         int storedValue = diceSet[diceNumberInSet - 1];
         System.out.println("Held dice with value: " + storedValue);
+        diceHolding[diceNumberInSet -1] = diceSet[diceNumberInSet -1];
+    }
+
+    private void reRollConsideringHeldDice()
+    {
         rollDice();
-        diceSet[diceNumberInSet - 1] = storedValue;
+        for (int i = 0; i < diceSet.length; i++) {
+            if (diceHolding[i] != 0)
+                diceSet[i] = diceHolding[i];
+        }
+
     }
 
     public void readDice()
     {
-        System.out.println("1: " + diceSet[0]);
-        System.out.println("2: " + diceSet[1]);
-        System.out.println("3: " + diceSet[2]);
-        System.out.println("4: " + diceSet[3]);
-        System.out.println("5: " + diceSet[4]);
-        System.out.println("6: " + diceSet[5]);
+        for (int i = 0; i < diceSet.length; i++)
+            System.out.println(i+1 + ": " + diceSet[i]);
+    }
+
+    private void clearHeldDice()
+    {
+        for (int i = 0; i < diceHolding.length; i++)
+            diceHolding[i] = 0;
     }
 
     private int RNG()
@@ -69,3 +116,37 @@ public class Player {
         return (int) ( (Math.random() * 6) + 1);
     }
 }
+//
+//
+//public class ActualOutputMngr implements Output
+//{
+//    public void print(String message)
+//    {
+//        System.out.println(message);
+//    }
+//}
+//
+//public class TestOutputMngr implements Output
+//{
+//    public String message;
+//    public void print(String message)
+//    {
+//        message = message;
+//    }
+//}
+//
+//public interface Output
+//{
+//    void print(String message);
+//}
+//
+//public class Test
+//{
+//    public void testplayer()
+//    {
+//        Output output = new TestOutputMngr();
+//        Player player = new Player(output);
+//        player.testMethod()
+//                Assert
+//    }
+//}
