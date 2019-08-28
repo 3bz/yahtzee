@@ -6,6 +6,8 @@ public class Game {
         System.arraycopy(aDiceSet, 0, this.dice, 0, 5);
     }
 
+    public Game(){}
+
     public int chanceScore() {
         return returnTotal();
     }

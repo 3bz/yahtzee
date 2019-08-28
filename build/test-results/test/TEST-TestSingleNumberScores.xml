@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSingleNumberScores" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-08-28T05:34:26" hostname="C02Y309QJG5J" time="0.001">
+<testsuite name="TestSingleNumberScores" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-08-28T23:42:07" hostname="C02Y309QJG5J" time="0.002">
   <properties/>
-  <testcase name="testFivesScore" classname="TestSingleNumberScores" time="0.0"/>
+  <testcase name="testFivesScore" classname="TestSingleNumberScores" time="0.001"/>
   <testcase name="testChanceScore" classname="TestSingleNumberScores" time="0.0"/>
   <testcase name="testSixesScore" classname="TestSingleNumberScores" time="0.0"/>
   <testcase name="testOnesScore" classname="TestSingleNumberScores" time="0.0"/>
