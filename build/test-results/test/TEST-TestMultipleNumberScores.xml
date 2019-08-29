@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestMultipleNumberScores" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-08-28T23:42:07" hostname="C02Y309QJG5J" time="0.0">
+<testsuite name="TestMultipleNumberScores" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-08-29T00:30:48" hostname="C02Y309QJG5J" time="0.003">
   <properties/>
-  <testcase name="testLargeStraightScoreUnordered" classname="TestMultipleNumberScores" time="0.0"/>
+  <testcase name="testLargeStraightScoreUnordered" classname="TestMultipleNumberScores" time="0.001"/>
   <testcase name="testChanceScore" classname="TestMultipleNumberScores" time="0.0"/>
   <testcase name="testLargeStraightScoreZeroReturn" classname="TestMultipleNumberScores" time="0.0"/>
   <testcase name="testSmallStraightScoreZeroReturn" classname="TestMultipleNumberScores" time="0.0"/>

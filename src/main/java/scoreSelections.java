@@ -15,10 +15,10 @@ public enum scoreSelections {
     FOUR_OF_A_KIND(true),
     YAHTZEE(true);
 
-    private boolean value;
-    private int listNumber;
+    private boolean boolValue;
 
-    scoreSelections(boolean value) {this.value = value;}
-    public boolean getValue() {return value; }
+    scoreSelections(boolean boolValue) {this.boolValue = boolValue;}
+    public boolean getBoolValue() {return boolValue; }
+    public void setBoolValue(boolean aValue) {this.boolValue = aValue;}
 
 }

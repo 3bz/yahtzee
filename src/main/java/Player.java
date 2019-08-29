@@ -27,13 +27,14 @@ public class Player {
             readDice();
             printScoreCategory();
             selectScoreCategory();
+            readScore();
         }
     }
 
     public void printScoreCategory() {
         for (int i = 0; i < MAX_AMOUNT_OF_CATAGORIES; i++) {
             System.out.print(i + 1 + ": ");
-            if (scoreSelections.values()[i].getValue() == true)
+            if (scoreSelections.values()[i].getBoolValue() == true)
                 System.out.println(scoreSelections.values()[i]);
             else
                 System.out.println(CATEGORY_USED_MSG);
@@ -42,20 +43,63 @@ public class Player {
 
     public void selectScoreCategory() {
         int playerSelection = scn.nextInt();
-        while (scoreSelections.values()[playerSelection - 1].getValue() == false) {
+        while (scoreSelections.values()[playerSelection - 1].getBoolValue() == false) {
             System.out.println("Select a valid category");
             playerSelection = scn.nextInt();
         }
         switch (playerSelection) {
             case (1):
-                myGame.chanceScore();
-
+                score += myGame.chanceScore(diceSet);
+                break;
+            case(2):
+                score += myGame.singleNumberCategoryScore(diceSet, 1);
+                break;
+            case(3):
+                score += myGame.singleNumberCategoryScore(diceSet, 2);
+                break;
+            case(4):
+                score += myGame.singleNumberCategoryScore(diceSet, 3);
+                break;
+            case(5):
+                score += myGame.singleNumberCategoryScore(diceSet, 4);
+                break;
+            case(6):
+                score += myGame.singleNumberCategoryScore(diceSet, 5);
+                break;
+            case(7):
+                score += myGame.singleNumberCategoryScore(diceSet, 6);
+                break;
+            case(8):
+                score += myGame.onePairScore(diceSet);
+                break;
+            case(9):
+                score += myGame.twoPairScore(diceSet);
+                break;
+            case(10):
+                score += myGame.smallStraightScore(diceSet);
+                break;
+            case(11):
+                score += myGame.largeStraightScore(diceSet);
+                break;
+            case(12):
+                score += myGame.fullHouseScore(diceSet);
+                break;
+            case(13):
+                score += myGame.threeOfAKindScore(diceSet);
+                break;
+            case(14):
+                score += myGame.fourOfAKindScore(diceSet);
+                break;
+            case(15):
+                score += myGame.yahtzeeScore(diceSet);
+                break;
         }
+        scoreSelections.values()[playerSelection-1].setBoolValue(false);
     }
 
     public boolean anyScoreCategoriesLeft() {
         for (scoreSelections selection : scoreSelections.values()) {
-            if (selection.getValue() == true)
+            if (selection.getBoolValue() == true)
                 return true;
         }
         return false;
@@ -116,6 +160,11 @@ public class Player {
     private void clearHeldDice() {
         for (int i = 0; i < diceHolding.length; i++)
             diceHolding[i] = 0;
+    }
+
+    public void readScore()
+    {
+        System.out.println("Current Score: " + score);
     }
 
     private int RNG() {
